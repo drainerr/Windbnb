@@ -8,7 +8,7 @@ const SearchModal = (props) => {
       <div className={styles.searchField}>
         <div className={styles.searchLocation}>
           <span className={styles.locationLabel}>LOCATION</span>
-          <span className={styles.locationName}>Helsinki,Finland!</span>
+          <span className={styles.locationName}>Helsinki, Finland</span>
         </div>
         <div className={styles.guests}>
           <label>GUESTS</label>

@@ -1,0 +1,13 @@
+.locationName {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.listItem {
+  margin-top: 36px;
+}
+.listItem:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  transition: 0.5s linear;
+}

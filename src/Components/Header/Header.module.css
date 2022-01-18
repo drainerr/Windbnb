@@ -1,0 +1,10 @@
+.Header {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoWrapper {
+  margin-left: 6.65vw;
+}

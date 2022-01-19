@@ -1,0 +1,37 @@
+.destination {
+  height: 240px;
+  list-style: none;
+}
+.locationList {
+  color: black;
+  margin-left: 7vw;
+  z-index: 100;
+  list-style: none;
+}
+.guestList {
+  margin-left: 37vw;
+  list-style: none;
+}
+.adults {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+}
+.adultsLabel,
+.childrenLabel {
+  font-weight: bold;
+}
+.adultsDefinition,
+.childrenDefinition {
+  color: darkgrey;
+  margin-bottom: 12px;
+}
+.children {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+}

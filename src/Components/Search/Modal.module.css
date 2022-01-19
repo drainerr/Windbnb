@@ -22,9 +22,3 @@
   align-items: flex-start;
   font-family: 'Mulish', sans-serif;
 }
-.locationList {
-  color: black;
-  margin-left: 7vw;
-  z-index: 101;
-  list-style: none;
-}

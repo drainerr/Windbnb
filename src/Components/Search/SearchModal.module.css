@@ -11,7 +11,25 @@
   flex-direction: column;
   justify-content: center;
   width: 30vw;
-  border: 1px solid #333333;
+  border: 1px solid white;
+}
+.searchLocation:hover,
+.guests:hover {
+  cursor: pointer;
+  transition: 0.1s linear;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border-radius: 16px;
+}
+.searchLocationOnFocus {
+  transition: 0.1s linear;
+  border-color: #333333;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  border-radius: 16px;
+}
+.guestsOnFocus {
+  transition: 0.1s linear;
+  border: solid 1px #333333 !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   border-radius: 16px;
 }
 .locationLabel {
@@ -33,20 +51,25 @@
   flex-direction: column;
   justify-content: center;
   width: 30vw;
+  border: solid 1px white;
   border-left: 1px solid #f2f2f2;
   border-right: 1px solid #f2f2f2;
 }
-.guests label {
+.guestLabel {
   font-size: 9px;
   font-weight: 800;
   line-height: 12px;
   padding-left: 27px;
   margin-bottom: 2px;
 }
-.guests input {
+.addGuests {
   border: none;
   outline: none;
   padding-left: 27px;
+  background-color: inherit;
+  color: #bdbdbd;
+  font-size: 14px;
+  font-weight: 400;
 }
 .searchButtonWrapper {
   width: 27vw;

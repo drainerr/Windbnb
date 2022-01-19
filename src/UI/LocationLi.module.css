@@ -8,6 +8,6 @@
 }
 .listItem:hover {
   cursor: pointer;
-  transform: scale(1.1, 1.1);
-  transition: 0.5s linear;
+  transform: translateX(20px);
+  transition: 0.3s linear;
 }

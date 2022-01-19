@@ -1,0 +1,12 @@
+.minBtn,
+.plusBtn {
+  border: 1px solid #828282;
+  border-radius: 4px;
+  background-color: white;
+  color: #828282;
+  height: 23px;
+  width: 23px;
+}
+.numOfGuests {
+  margin: auto 15px;
+}

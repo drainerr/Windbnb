@@ -5,15 +5,24 @@ import styles from './Search.module.css';
 
 const Search = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [chosenLocation, setChosenLocation] = useState('Helsinki, Finland');
+  const [objClicked, setObjClicked] = useState('location');
+  console.log(objClicked);
 
   return (
     <React.Fragment>
-      <Modal active={isSearchActive} onClose={() => setIsSearchActive(false)} />
+      <Modal
+        active={isSearchActive}
+        onClose={() => setIsSearchActive(false)}
+        onLocClick={() => setObjClicked('location')}
+        onGuestsClick={() => setObjClicked('guests')}
+        objClicked={objClicked}
+      />
       <div className={styles.searchWrapper}>
         <div className={styles.Location}>
           <input
             type="text"
-            placeholder="Where are you going?"
+            value={chosenLocation}
             onFocus={() => setIsSearchActive(true)}
           />
         </div>

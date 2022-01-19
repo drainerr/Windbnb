@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MdOutlineSearch as SearchIcon } from 'react-icons/md';
+import Button from '../../UI/Button';
 import Modal from './Modal';
 import styles from './Search.module.css';
 
@@ -19,26 +20,20 @@ const Search = () => {
         objClicked={objClicked}
       />
       <div className={styles.searchWrapper}>
-        <div className={styles.Location}>
-          <input
-            type="text"
-            value={chosenLocation}
-            onFocus={() => setIsSearchActive(true)}
-          />
+        <div className={styles.location}>
+          <Button onFocus={() => setIsSearchActive(true)}>
+            Helsinki, Finland
+          </Button>
         </div>
-        <div className={styles.addGuests}>
-          <input
-            type="text"
-            placeholder="Add guests"
-            onFocus={() => setIsSearchActive(true)}
-          />
+        <div className={styles.guests}>
+          <Button onFocus={() => setIsSearchActive(true)}>Add guests</Button>
         </div>
-        <div
-          className={styles.searchButton}
-          onClick={() => setIsSearchActive(true)}
+        <Button
+          className={styles.searchBtn}
+          onFocus={() => setIsSearchActive(true)}
         >
-          <SearchIcon className={styles.searchIcon} />
-        </div>
+          <SearchIcon />
+        </Button>
       </div>
     </React.Fragment>
   );

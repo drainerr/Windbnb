@@ -21,16 +21,28 @@ const Search = () => {
       />
       <div className={styles.searchWrapper}>
         <div className={styles.location}>
-          <Button onFocus={() => setIsSearchActive(true)}>
-            Helsinki, Finland
+          <Button
+            onClick={() => {
+              setObjClicked('location');
+              setIsSearchActive(true);
+            }}
+          >
+            {chosenLocation}
           </Button>
         </div>
         <div className={styles.guests}>
-          <Button onFocus={() => setIsSearchActive(true)}>Add guests</Button>
+          <Button
+            onClick={() => {
+              setObjClicked('guests');
+              setIsSearchActive(true);
+            }}
+          >
+            Add guests
+          </Button>
         </div>
         <Button
           className={styles.searchBtn}
-          onFocus={() => setIsSearchActive(true)}
+          onClick={() => setIsSearchActive(true)}
         >
           <SearchIcon />
         </Button>

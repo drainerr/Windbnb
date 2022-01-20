@@ -41,7 +41,11 @@ function App() {
         stays={filteredStays}
       />
       <footer className="footer">
-        created by <span>GeorgeKVR</span> - devChallenges.io
+        created by{' '}
+        <span>
+          <a href="https://github.com/GeorgeKVR">GeorgeKVR</a>
+        </span>{' '}
+        - devChallenges.io
       </footer>
     </div>
   );

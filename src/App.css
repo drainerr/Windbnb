@@ -15,7 +15,8 @@
 
   font-family: 'Montserrat', sans-serif;
 }
-.footer span {
+.footer span,
+a {
   color: #474747;
   text-decoration: underline;
 }

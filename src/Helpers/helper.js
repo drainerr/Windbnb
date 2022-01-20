@@ -1,4 +1,4 @@
-export const getSelectedCountry = (string) => {
+export const getCityAndCountry = (string) => {
   const cityAndCountry = string.split(',');
-  return cityAndCountry[1];
+  return { city: cityAndCountry[0], country: cityAndCountry[1] };
 };

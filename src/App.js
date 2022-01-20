@@ -3,23 +3,42 @@ import Header from './Components/Header/Header';
 import './App.css';
 import Main from './Components/Main/Main';
 import data from './stays.json';
-import { getSelectedCountry } from './Helpers/helper';
+import { getCityAndCountry } from './Helpers/helper';
 
 function App() {
   const [chosenLocation, setChosenLocation] = useState('Helsinki, Finland');
+  const [numOfAdultGuests, setNumOfAdultGuests] = useState(0);
+  const [numOfChildrenGuests, setNumOfChildrenGuests] = useState(0);
+  console.log(numOfAdultGuests, numOfChildrenGuests);
+  const setNumOfGuests = {
+    adults: setNumOfAdultGuests,
+    children: setNumOfChildrenGuests,
+  };
+  const getNumOfGuests = {
+    adults: numOfAdultGuests,
+    children: numOfChildrenGuests,
+  };
   console.log(data[1]);
+  const filteredStays = data.filter(
+    (stay) =>
+      stay.city === getCityAndCountry(chosenLocation).city &&
+      numOfAdultGuests + numOfChildrenGuests <= stay.maxGuests
+  );
+
   return (
     <div className="App">
       <Header
         chosenLocation={chosenLocation}
         setChosenLocation={setChosenLocation}
+        setNumOfGuests={setNumOfGuests}
+        getNumOfGuests={getNumOfGuests}
       />
       <Main
         aboutStays={{
-          numOfStays: data.length,
-          selectedCountry: getSelectedCountry(chosenLocation),
+          numOfStays: filteredStays.length,
+          selectedCountry: getCityAndCountry(chosenLocation).country,
         }}
-        stays={data}
+        stays={filteredStays}
       />
       <footer className="footer">
         created by <span>GeorgeKVR</span> - devChallenges.io

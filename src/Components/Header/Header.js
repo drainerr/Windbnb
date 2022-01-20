@@ -9,6 +9,8 @@ const Header = (props) => {
         <img src={Logo} />
       </div>
       <Search
+        setNumOfGuests={props.setNumOfGuests}
+        getNumOfGuests={props.getNumOfGuests}
         chosenLocation={props.chosenLocation}
         setChosenLocation={props.setChosenLocation}
       />

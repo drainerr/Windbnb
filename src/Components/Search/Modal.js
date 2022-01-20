@@ -18,8 +18,11 @@ const Modal = (props) => {
           chosenLocation={props.chosenLocation}
         />
         <Location
+          onClose={onClose}
           objClicked={objClicked}
           setChosenLocation={props.setChosenLocation}
+          setNumOfGuests={props.setNumOfGuests}
+          getNumOfGuests={props.getNumOfGuests}
         ></Location>
       </div>
     </React.Fragment>

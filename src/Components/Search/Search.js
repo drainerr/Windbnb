@@ -19,6 +19,8 @@ const Search = (props) => {
         objClicked={objClicked}
         chosenLocation={props.chosenLocation}
         setChosenLocation={props.setChosenLocation}
+        setNumOfGuests={props.setNumOfGuests}
+        getNumOfGuests={props.getNumOfGuests}
       />
       <div className={styles.searchWrapper}>
         <div className={styles.location}>

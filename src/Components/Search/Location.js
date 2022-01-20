@@ -1,16 +1,14 @@
-import { useState } from 'react';
 import styles from './Location.module.css';
 import LocationLi from '../../UI/LocationLI';
 import GuestsLi from '../../UI/GuestsLi';
 
 const Location = (props) => {
-  const [numOfAdultGuests, setNumOfAdultGuests] = useState(0);
-  const [numOfChildrenGuests, setNumOfChildrenGuests] = useState(0);
-  const { setChosenLocation } = props;
+  const { setChosenLocation, onClose, setNumOfGuests, getNumOfGuests } = props;
 
   const onClickHandler = (obj) => {
     const location = obj.innerText;
     setChosenLocation((prevLocation) => location || prevLocation);
+    onClose();
   };
   return (
     <div className={styles.destination}>
@@ -49,10 +47,12 @@ const Location = (props) => {
             label={'Adults'}
             definitionStyle={styles.adultsDefinition}
             definition={'Ages 13 or above'}
-            numOfGuests={numOfAdultGuests}
-            incHandler={() => setNumOfAdultGuests((prevState) => prevState + 1)}
+            numOfGuests={getNumOfGuests.adults}
+            incHandler={() =>
+              setNumOfGuests.adults((prevState) => prevState + 1)
+            }
             decHandler={() =>
-              setNumOfAdultGuests((prevState) =>
+              setNumOfGuests.adults((prevState) =>
                 prevState !== 0 ? prevState - 1 : 0
               )
             }
@@ -63,12 +63,12 @@ const Location = (props) => {
             label={'Children'}
             definitionStyle={styles.childrenDefinition}
             definition={'Ages 2-12'}
-            numOfGuests={numOfChildrenGuests}
+            numOfGuests={getNumOfGuests.children}
             incHandler={() =>
-              setNumOfChildrenGuests((prevState) => prevState + 1)
+              setNumOfGuests.children((prevState) => prevState + 1)
             }
             decHandler={() =>
-              setNumOfChildrenGuests((prevState) =>
+              setNumOfGuests.children((prevState) =>
                 prevState !== 0 ? prevState - 1 : 0
               )
             }

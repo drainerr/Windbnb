@@ -4,8 +4,7 @@ import { MdOutlineSearch as SearchIcon } from 'react-icons/md';
 import Button from '../../UI/Button';
 
 const SearchModal = (props) => {
-  const { objClicked, onLocClick, onGuestsClick } = props;
-
+  const { objClicked, onLocClick, onGuestsClick, onClose } = props;
   return (
     <div className={styles.searchModal}>
       <div className={styles.searchField}>
@@ -28,7 +27,7 @@ const SearchModal = (props) => {
           <span className={styles.addGuests}>Add Guests</span>
         </div>
         <div className={styles.searchButtonWrapper}>
-          <Button onClick={props.onClose} className={styles.searchButton}>
+          <Button onClick={onClose} className={styles.searchButton}>
             <i className={styles.searchIcon}>
               <SearchIcon />
             </i>

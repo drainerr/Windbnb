@@ -4,6 +4,7 @@ const Main = (props) => {
   const { aboutStays, stays } = props;
   const country = aboutStays.selectedCountry;
   const numOfStays = aboutStays.numOfStays;
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.aboutStays}>

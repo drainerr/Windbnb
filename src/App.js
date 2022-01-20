@@ -9,7 +9,7 @@ function App() {
   const [chosenLocation, setChosenLocation] = useState('Helsinki, Finland');
   const [numOfAdultGuests, setNumOfAdultGuests] = useState(0);
   const [numOfChildrenGuests, setNumOfChildrenGuests] = useState(0);
-  console.log(numOfAdultGuests, numOfChildrenGuests);
+
   const setNumOfGuests = {
     adults: setNumOfAdultGuests,
     children: setNumOfChildrenGuests,
@@ -18,7 +18,7 @@ function App() {
     adults: numOfAdultGuests,
     children: numOfChildrenGuests,
   };
-  console.log(data[1]);
+
   const filteredStays = data.filter(
     (stay) =>
       stay.city === getCityAndCountry(chosenLocation).city &&

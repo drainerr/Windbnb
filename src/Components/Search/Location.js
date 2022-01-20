@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import styles from './Destination.module.css';
+import styles from './Location.module.css';
 import LocationLi from '../../UI/LocationLI';
 import GuestsLi from '../../UI/GuestsLi';
 
-const Destination = (props) => {
+const Location = (props) => {
   const [numOfAdultGuests, setNumOfAdultGuests] = useState(0);
   const [numOfChildrenGuests, setNumOfChildrenGuests] = useState(0);
   const { setChosenLocation } = props;
@@ -79,4 +79,4 @@ const Destination = (props) => {
   );
 };
 
-export default Destination;
+export default Location;

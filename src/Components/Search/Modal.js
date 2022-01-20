@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Modal.module.css';
 import SearchModal from './SearchModal';
-import Destination from './Destination';
+import Location from './Location';
 const Modal = (props) => {
   const { active, onClose, onLocClick, onGuestsClick, objClicked } = props;
 
@@ -17,10 +17,10 @@ const Modal = (props) => {
           objClicked={objClicked}
           chosenLocation={props.chosenLocation}
         />
-        <Destination
+        <Location
           objClicked={objClicked}
           setChosenLocation={props.setChosenLocation}
-        ></Destination>
+        ></Location>
       </div>
     </React.Fragment>
   );

@@ -1,6 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 .mainContainer {
   margin-top: 60px;
   width: 86vw;
   min-height: 750px;
-  background-color: gold;
+  font-family: 'Montserrat', sans-serif;
+}
+.aboutStays {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutStays h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #333333;
+}
+.aboutStays h6 {
+  color: #4f4f4f;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+.staysWrapper {
+  width: inherit;
 }

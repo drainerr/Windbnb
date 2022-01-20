@@ -8,6 +8,8 @@ const Search = (props) => {
   const [isSearchActive, setIsSearchActive] = useState(false);
 
   const [objClicked, setObjClicked] = useState('location');
+  const numOfGuests =
+    props.getNumOfGuests.adults + props.getNumOfGuests.children;
 
   return (
     <React.Fragment>
@@ -40,7 +42,7 @@ const Search = (props) => {
               setIsSearchActive(true);
             }}
           >
-            Add guests
+            {numOfGuests > 0 ? `${numOfGuests} Guests` : 'Add guests'}
           </Button>
         </div>
         <Button

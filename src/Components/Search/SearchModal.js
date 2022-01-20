@@ -15,7 +15,11 @@ const SearchModal = (props) => {
           onClick={onLocClick}
         >
           <span className={styles.locationLabel}>LOCATION</span>
-          <span className={styles.locationName}>{props.chosenLocation}</span>
+          <span className={styles.locationName}>
+            <span className={styles.chosenLocation}>
+              {props.chosenLocation}
+            </span>
+          </span>
         </div>
         <div
           className={`${styles.guests} ${

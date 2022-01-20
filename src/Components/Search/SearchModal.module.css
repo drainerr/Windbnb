@@ -47,6 +47,11 @@
 .searchLocation span {
   padding-left: 27px;
 }
+.chosenLocation {
+  font-weight: 400;
+  color: #333333;
+  padding-left: unset !important;
+}
 .guests {
   display: flex;
   flex-direction: column;

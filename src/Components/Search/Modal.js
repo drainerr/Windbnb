@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './Modal.module.css';
 import SearchModal from './SearchModal';
 import Destination from './Destination';
 const Modal = (props) => {
   const { active, onClose, onLocClick, onGuestsClick, objClicked } = props;
+
   if (!active) return null;
   return (
     <React.Fragment>
@@ -14,8 +15,12 @@ const Modal = (props) => {
           onLocClick={onLocClick}
           onGuestsClick={onGuestsClick}
           objClicked={objClicked}
+          chosenLocation={props.chosenLocation}
         />
-        <Destination objClicked={objClicked}></Destination>
+        <Destination
+          objClicked={objClicked}
+          setChosenLocation={props.setChosenLocation}
+        ></Destination>
       </div>
     </React.Fragment>
   );

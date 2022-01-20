@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './SearchModal.module.css';
 import { MdOutlineSearch as SearchIcon } from 'react-icons/md';
 import Button from '../../UI/Button';
 
 const SearchModal = (props) => {
   const { objClicked, onLocClick, onGuestsClick } = props;
+
   return (
     <div className={styles.searchModal}>
       <div className={styles.searchField}>
@@ -15,7 +16,7 @@ const SearchModal = (props) => {
           onClick={onLocClick}
         >
           <span className={styles.locationLabel}>LOCATION</span>
-          <span className={styles.locationName}>Helsinki, Finland</span>
+          <span className={styles.locationName}>{props.chosenLocation}</span>
         </div>
         <div
           className={`${styles.guests} ${

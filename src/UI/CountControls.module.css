@@ -7,6 +7,10 @@
   height: 23px;
   width: 23px;
 }
+.minBtn:hover,
+.plusBtn:hover {
+  cursor: pointer;
+}
 .numOfGuests {
   margin: auto 15px;
 }

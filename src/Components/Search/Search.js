@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { MdOutlineSearch as SearchIcon } from 'react-icons/md';
 import Button from '../../UI/Button';
 import Modal from './Modal';
 import styles from './Search.module.css';
 
-const Search = () => {
+const Search = (props) => {
   const [isSearchActive, setIsSearchActive] = useState(false);
-  const [chosenLocation, setChosenLocation] = useState('Helsinki, Finland');
+
   const [objClicked, setObjClicked] = useState('location');
-  console.log(objClicked);
 
   return (
     <React.Fragment>
@@ -18,6 +17,8 @@ const Search = () => {
         onLocClick={() => setObjClicked('location')}
         onGuestsClick={() => setObjClicked('guests')}
         objClicked={objClicked}
+        chosenLocation={props.chosenLocation}
+        setChosenLocation={props.setChosenLocation}
       />
       <div className={styles.searchWrapper}>
         <div className={styles.location}>
@@ -27,7 +28,7 @@ const Search = () => {
               setIsSearchActive(true);
             }}
           >
-            {chosenLocation}
+            {props.chosenLocation}
           </Button>
         </div>
         <div className={styles.guests}>

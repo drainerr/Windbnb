@@ -6,15 +6,40 @@ import GuestsLi from '../../UI/GuestsLi';
 const Destination = (props) => {
   const [numOfAdultGuests, setNumOfAdultGuests] = useState(0);
   const [numOfChildrenGuests, setNumOfChildrenGuests] = useState(0);
+  const { setChosenLocation } = props;
 
+  const onClickHandler = (obj) => {
+    const location = obj.innerText;
+    setChosenLocation((prevLocation) => location || prevLocation);
+  };
   return (
     <div className={styles.destination}>
       {props.objClicked === 'location' ? (
         <ul className={styles.locationList}>
-          <LocationLi className={styles.listItem}>Helsinki, Finland</LocationLi>
-          <LocationLi className={styles.listItem}>Turku, Finland</LocationLi>
-          <LocationLi className={styles.listItem}>Oulu, Finland</LocationLi>
-          <LocationLi className={styles.listItem}>Vaasa, Finland</LocationLi>
+          <LocationLi
+            className={styles.listItem}
+            onClick={({ target }) => onClickHandler(target)}
+          >
+            Helsinki, Finland
+          </LocationLi>
+          <LocationLi
+            className={styles.listItem}
+            onClick={({ target }) => onClickHandler(target)}
+          >
+            Turku, Finland
+          </LocationLi>
+          <LocationLi
+            className={styles.listItem}
+            onClick={({ target }) => onClickHandler(target)}
+          >
+            Oulu, Finland
+          </LocationLi>
+          <LocationLi
+            className={styles.listItem}
+            onClick={({ target }) => onClickHandler(target)}
+          >
+            Vaasa, Finland
+          </LocationLi>
         </ul>
       ) : (
         <ul className={styles.guestList}>

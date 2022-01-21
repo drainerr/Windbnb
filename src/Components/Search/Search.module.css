@@ -61,3 +61,24 @@
   font-size: 20px;
   color: #eb5757;
 }
+
+@media only screen and (max-width: 1024px) {
+  .searchWrapper {
+    height: 6vw;
+    width: 30vw !important;
+  }
+  .location {
+    width: 14vw;
+  }
+  .guests {
+    width: 10vw;
+  }
+  .location button,
+  .guests button {
+    font-size: 1.4vw;
+  }
+  .searchBtn {
+    font-size: 2vw;
+    width: 5vw;
+  }
+}

@@ -8,3 +8,15 @@
 .logoWrapper {
   margin-left: 6.65vw;
 }
+
+@media only screen and (max-width: 420px) {
+  .Header {
+    flex-direction: column;
+  }
+  .logoWrapper {
+    align-self: flex-start;
+  }
+  .logoWrapper img {
+    width: 18.4vw;
+  }
+}

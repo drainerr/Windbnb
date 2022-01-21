@@ -36,3 +36,14 @@
     font-size: 1.7vw;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  .aboutStays h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .aboutStays h6 {
+    line-height: 17px;
+    font-size: 14px;
+  }
+}

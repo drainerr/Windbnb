@@ -84,3 +84,40 @@
     font-size: 1.15vw;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  .card {
+    width: unset;
+  }
+  .img {
+    border-radius: 24px;
+    width: 93.3vw !important;
+    height: 240px;
+  }
+  .stayDetails {
+    font-size: 12px;
+    margin-top: 18px;
+  }
+  .starIcon {
+    font-size: 18px;
+    margin-right: 6.3px;
+  }
+  .title {
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 32px;
+    line-height: 17px;
+  }
+  .type {
+    font-size: 12px;
+    line-height: 14.6px;
+  }
+  .superHost {
+    height: 25px;
+    width: 23.5vw;
+  }
+  .superHost p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

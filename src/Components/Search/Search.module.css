@@ -82,3 +82,26 @@
     width: 5vw;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  .searchWrapper {
+    width: 79.2vw !important;
+    height: 55px;
+    margin-top: 40px;
+    margin-bottom: 37px;
+  }
+  .location {
+    width: 37.3vw;
+  }
+  .guests {
+    width: 28vw;
+  }
+  .location button,
+  .guests button {
+    font-size: 14px;
+  }
+  .searchBtn {
+    font-size: 18px;
+    width: 14vw;
+  }
+}

@@ -3,3 +3,11 @@
   flex-wrap: wrap;
   gap: 1.7vw;
 }
+@media only screen and (max-width: 420px) {
+  .staysWrapper {
+    gap: unset;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}

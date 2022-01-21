@@ -23,6 +23,7 @@ const Search = (props) => {
         setChosenLocation={props.setChosenLocation}
         setNumOfGuests={props.setNumOfGuests}
         getNumOfGuests={props.getNumOfGuests}
+        screenWidth={props.screenWidth}
       />
       <div className={styles.searchWrapper}>
         <div className={styles.location}>

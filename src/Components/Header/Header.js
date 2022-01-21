@@ -13,6 +13,7 @@ const Header = (props) => {
         getNumOfGuests={props.getNumOfGuests}
         chosenLocation={props.chosenLocation}
         setChosenLocation={props.setChosenLocation}
+        screenWidth={props.screenWidth}
       />
     </div>
   );

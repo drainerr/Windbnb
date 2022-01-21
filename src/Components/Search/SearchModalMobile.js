@@ -1,23 +1,17 @@
 import React from 'react';
-import styles from './SearchModal.module.css';
-import SearchBtn from './SearchBtn';
-import SearchModalMobile from './SearchModalMobile';
-
-const SearchModal = (props) => {
-  const { objClicked, onLocClick, onGuestsClick, onClose } = props;
-  if (screen.width <= 420) {
-    return (
-      <SearchModalMobile
-        chosenLocation={props.chosenLocation}
-        onLocClick={onLocClick}
-        onGuestsClick={onGuestsClick}
-        onClick={onClose}
-        objClicked={objClicked}
-      />
-    );
-  }
+import styles from './SearchModalMobile.module.css';
+import { MdClose as CloseIcon } from 'react-icons/md';
+import Button from '../../UI/Button';
+const SearchModalMobile = (props) => {
+  const { onLocClick, onGuestsClick, onClick, objClicked } = props;
   return (
-    <div className={styles.searchModal}>
+    <React.Fragment>
+      <div className={styles.topPanel}>
+        <h5>Edit your search</h5>
+        <Button onClick={onClick} className={styles.closeBtn}>
+          <CloseIcon />
+        </Button>
+      </div>
       <div className={styles.searchField}>
         <div
           className={`${styles.searchLocation} ${
@@ -41,13 +35,9 @@ const SearchModal = (props) => {
           <span className={styles.guestLabel}>GUESTS</span>
           <span className={styles.addGuests}>Add Guests</span>
         </div>
-        <SearchBtn
-          onClick={onClose}
-          wrapperStyle={styles.searchButtonWrapper}
-        />
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
-export default SearchModal;
+export default SearchModalMobile;

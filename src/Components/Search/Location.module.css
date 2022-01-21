@@ -1,18 +1,17 @@
 .destination {
   list-style: none;
+  height: 240px;
 }
 .locationList {
   color: black;
-  margin-left: 7vw;
   z-index: 100;
   list-style: none;
 }
 .guestList {
-  margin-left: 7vw;
   list-style: none;
 }
 .adults {
-  margin-top: 48px;
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
   font-size: 14px;

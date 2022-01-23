@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Windbnb/static/css/main.6aeb5dc4.css",
-    "main.js": "/Windbnb/static/js/main.60733612.js",
-    "static/media/logo.svg": "/Windbnb/static/media/logo.beef9462a899fe60cb52edfd446e26ef.svg",
+    "main.css": "/Windbnb/static/css/main.4345689f.css",
+    "main.js": "/Windbnb/static/js/main.33e06a5c.js",
+    "static/media/logo.svg": "/Windbnb/static/media/logo.ee346c989a8c7dfd2766b446acd01ff7.svg",
     "index.html": "/Windbnb/index.html",
-    "main.6aeb5dc4.css.map": "/Windbnb/static/css/main.6aeb5dc4.css.map",
-    "main.60733612.js.map": "/Windbnb/static/js/main.60733612.js.map"
+    "main.4345689f.css.map": "/Windbnb/static/css/main.4345689f.css.map",
+    "main.33e06a5c.js.map": "/Windbnb/static/js/main.33e06a5c.js.map"
   },
   "entrypoints": [
-    "static/css/main.6aeb5dc4.css",
-    "static/js/main.60733612.js"
+    "static/css/main.4345689f.css",
+    "static/js/main.33e06a5c.js"
   ]
 }

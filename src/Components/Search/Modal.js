@@ -4,15 +4,7 @@ import SearchModal from './SearchModal';
 import SearchBtn from './SearchBtn';
 import Location from './Location';
 const Modal = (props) => {
-  const {
-    active,
-    onClose,
-    onLocClick,
-    onGuestsClick,
-    objClicked,
-    screenWidth,
-  } = props;
-  console.log(screenWidth);
+  const { active, onClose, onLocClick, onGuestsClick, objClicked } = props;
 
   if (!active) return null;
   return (
@@ -33,7 +25,9 @@ const Modal = (props) => {
           setNumOfGuests={props.setNumOfGuests}
           getNumOfGuests={props.getNumOfGuests}
         ></Location>
-        {screen.width <= 420 && <SearchBtn wrapperStyle={styles.searchBtn} />}
+        {screen.width <= 420 && (
+          <SearchBtn wrapperStyle={styles.searchBtn} onClick={onClose} />
+        )}
       </div>
     </React.Fragment>
   );
